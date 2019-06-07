@@ -6,57 +6,34 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import {
-  MatchResults,
-} from '@stencil/router';
 
 
 export namespace Components {
-  interface AppHome {}
-  interface AppProfile {
-    'match': MatchResults;
+  interface SliderMenu {
+    'message': string;
   }
-  interface AppRoot {}
 }
 
 declare global {
 
 
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
+  interface HTMLSliderMenuElement extends Components.SliderMenu, HTMLStencilElement {}
+  var HTMLSliderMenuElement: {
+    prototype: HTMLSliderMenuElement;
+    new (): HTMLSliderMenuElement;
   };
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
-    'app-root': HTMLAppRootElement;
+    'slider-menu': HTMLSliderMenuElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
-  interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
-    'match'?: MatchResults;
+  interface SliderMenu extends JSXBase.HTMLAttributes<HTMLSliderMenuElement> {
+    'message'?: string;
   }
-  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
 
   interface IntrinsicElements {
-    'app-home': AppHome;
-    'app-profile': AppProfile;
-    'app-root': AppRoot;
+    'slider-menu': SliderMenu;
   }
 }
 
